@@ -1,0 +1,108 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background */
+.currency-converter {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Card */
+.currency-div {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading */
+.currency-div h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+/* Amount input */
+.currency-div label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.currency-div input {
+  margin-top: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: 0.3s;
+}
+
+.currency-div input:focus {
+  border-color: #667eea;
+}
+
+/* Currency selectors */
+.currency-selector {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.currency-selector div {
+  flex: 1;
+}
+
+.currency-selector select {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Button */
+.currency-div button {
+  width: 100%;
+  padding: 14px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.currency-div button:hover:not(:disabled) {
+  background: #5a67d8;
+  transform: translateY(-2px);
+}
+
+.currency-div button:disabled {
+  background: #c7c7c7;
+  cursor: not-allowed;
+}
+.result h2 {
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
