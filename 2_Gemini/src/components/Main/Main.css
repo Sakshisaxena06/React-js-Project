@@ -1,0 +1,234 @@
+/* Main container - full page */
+.main {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: #121212; /* dark background */
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Nav text */
+.nav {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Profile image at top-right corner */
+.profile {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00e0ff;
+  box-shadow: 0 0 8px rgba(0, 224, 255, 0.7);
+  filter: none;
+  background-color: #fff;
+}
+
+/* Main container for center content */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding-top: 80px; /* leave space for top nav and image */
+}
+
+/* Greeting section */
+.greet {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.greet span {
+  font-size: 36px;
+  font-weight: 700;
+  color: #00e0ff;
+}
+
+.greet p {
+  font-size: 22px;
+  color: #ccc;
+  margin-top: 8px;
+}
+
+/* Cards container - horizontal slides */
+.cards {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  width: 100%;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+/* Hide horizontal scrollbar */
+.cards::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual card */
+.card {
+  flex: 0 0 auto;
+  background-color: #1f1f1f;
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  min-width: 280px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.card:hover {
+  background-color: #2a2a2a;
+  transform: translateY(-4px);
+}
+
+.card p {
+  font-size: 14px;
+  color: #fff;
+  margin: 0;
+  line-height: 1.3;
+  flex: 1;
+}
+
+.card img {
+  width: 28px;
+  height: 28px;
+  margin-left: 12px;
+  filter: brightness(0) invert(1); /* make icons white */
+}
+
+/* Bottom section */
+.main-bottom {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-box {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  padding: 10px 16px;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #2a2a2a;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-box div img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  filter: brightness(0) invert(1);
+}
+
+/* Bottom info text */
+.bottom-info {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #888;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .greet span {
+    font-size: 28px;
+  }
+
+  .greet p {
+    font-size: 18px;
+  }
+
+  .card {
+    min-width: 220px;
+  }
+
+  .search-box {
+    max-width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box div {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8px;
+  }
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  padding: 8px 12px;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+/* Start icons: gallery + mic */
+.start-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.start-icons img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  filter: brightness(0) invert(1);
+}
+
+/* Input field takes remaining space */
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #2a2a2a;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+/* End icon: send */
+.end-icon img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  filter: brightness(0) invert(1);
+}
+
